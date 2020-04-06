@@ -6,6 +6,11 @@ class Bookmarking < Sinatra::Base
   end
 
   get '/bookmarks' do
+    @bookmarks = [
+      "www.bbc.com",
+      "www.alltheweb.com",
+      "www.google.com"
+    ]
     erb :'bookmarks/index'
   end
 
