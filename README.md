@@ -1,4 +1,5 @@
 # Bookmark Challenge - once again!
+[![Build Status](https://travis-ci.com/KOlofinmoyin/bookmarking.svg?branch=master)](https://travis-ci.com/KOlofinmoyin/bookmarking)
 
 ### The project
 The bookmark manager is a website to maintain a collection of bookmarks (URLs).
