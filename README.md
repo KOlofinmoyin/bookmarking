@@ -19,7 +19,12 @@ The bookmark manager is a website to maintain a collection of bookmarks (URLs).
 
 ### User Stories:
 ```
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+As a time-pressed user
+So that I can quickly go to web sites I regularly visit
+I would like to see a list of bookmarks
+
+
+
 ```
 
 ### Test cases:
