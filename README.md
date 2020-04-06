@@ -1,7 +1,11 @@
 # Bookmark Challenge - once again!
 
 ### The project
-You're going to build a bookmark manager. A bookmark manager is a website to maintain a collection of bookmarks (URLs). You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse bookmarks other users have added. You can comment on the bookmarks.
+The bookmark manager is a website to maintain a collection of bookmarks (URLs).
++ It can be used to save the urls of useful webpages.
++ It can be used to add tags to saved webpages, in order to find them later.
++ it can be used to browse bookmarks other users have added.
++ it can be used to comment on bookmarks.
 
 ### Core competences learnt:
 + Agile and TDD
