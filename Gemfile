@@ -5,8 +5,9 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 group :test do
-  gem 'rspec'
-  gem 'git-wayback-machine'
   gem 'capybara'
+  gem 'git-wayback-machine'
+  gem 'rspec'
   gem 'rubocop'
+  gem 'sinatra'
 end
