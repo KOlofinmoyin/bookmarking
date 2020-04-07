@@ -17,6 +17,14 @@ The bookmark manager is a website to maintain a collection of bookmarks (URLs).
 ### Domain model:
 <img width="566" alt="Screenshot 2020-04-06 at 14 34 41" src="https://user-images.githubusercontent.com/33905131/78564088-dadf4b00-7813-11ea-964b-9745438ea8fd.png">
 
+### To set up the database
+
+1. Connect to `psql` and create the `bookmark_manager` database:
+
+2. CREATE DATABASE `bookmark_manager;`
+
+3. To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+
 ### To run app:
 - `rackup -p 3000`
 
