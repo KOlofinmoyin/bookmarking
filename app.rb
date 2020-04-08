@@ -3,7 +3,7 @@ require './lib/bookmarks'
 
 class BookmarkManager < Sinatra::Base
   get '/' do
-    'www.bbc.com'
+    'http://www.google.com'
   end
 
   get '/bookmarks' do

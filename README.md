@@ -19,11 +19,17 @@ The bookmark manager is a website to maintain a collection of bookmarks (URLs).
 
 ### To set up the database
 
-1. Connect to `psql` and create the `bookmark_manager` database:
+1. Connect to `psql` and create the `bookmark_manager` database using: CREATE DATABASE `bookmark_manager;`
 
-2. CREATE DATABASE `bookmark_manager;`
+2. To set up the appropriate tables, connect to the database in `psql` using `\c bookmarking_manager` and
 
-3. To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+3. Run the SQL scripts in the `db/migrations` folder in the given order.
+
+4. Insert into database using: `INSERT into bookmarkings(url) VALUES('http://www.makersacademy.com')`
+
+5. Delete from  database using: `DELETE from  bookmarkings(url) WHERE url = 'http://www.makersacademy.com'`
+
+6. Update from  database using (example): `UPDATE  bookmarkings(url) SET url = 'http://www.destroyallsoftware.com' WHERE url= 'http://www.twitter.com'`
 
 ### To run app:
 - `rackup -p 3000`
