@@ -1,3 +1,4 @@
 require_relative "./app"
+# set :database, "postgres://localhost/[bookmarking_manager]"
 
-run BookmarkManager
+run Bookmarking_Manager

@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require './lib/bookmarks'
 
-class BookmarkManager < Sinatra::Base
+class Bookmarking_Manager < Sinatra::Base
   get '/' do
     'http://www.google.com'
   end

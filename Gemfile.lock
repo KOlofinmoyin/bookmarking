@@ -15,6 +15,8 @@ GEM
     diff-lcs (1.3)
     git-wayback-machine (0.1.2)
     jaro_winkler (1.5.4)
+    launchy (2.5.0)
+      addressable (~> 2.7)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     mustermann (1.1.1)
@@ -77,6 +79,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   git-wayback-machine
+  launchy
   pg
   rspec
   rubocop
