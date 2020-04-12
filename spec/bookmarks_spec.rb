@@ -18,8 +18,4 @@ describe Bookmarking do
     end
   end
 
-  xit "creates bookmarks" do
-    browser = Bookmarking.create_bookmarks
-    expect(browser).to include('http://www.nairaland.com')
-  end
 end
