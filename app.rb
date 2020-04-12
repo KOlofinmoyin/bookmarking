@@ -7,6 +7,7 @@ class Bookmarking_Manager < Sinatra::Base
   end
 
   get '/bookmarks' do
+    p ENV
     @bookmarks = Bookmarking.bring_bookmarks
     erb :'bookmarks/index'
   end
