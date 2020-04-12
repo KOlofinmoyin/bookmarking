@@ -9,7 +9,6 @@ RSpec.feature "viewing features" do
     connection.exec("INSERT INTO bookmarkings VALUES (3, 'http://www.alltheweb.com');")
 
     visit('/bookmarks')
-    save_and_open_page
     expect(page).to have_content("http://www.google.com")
     expect(page).to have_content("http://www.bbc.com")
     expect(page).to have_content("http://www.alltheweb.com")
