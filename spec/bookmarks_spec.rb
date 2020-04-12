@@ -11,15 +11,15 @@ describe Bookmarking do
       connection.exec("INSERT INTO bookmarkings VALUES ('http://www.alltheweb.com');")
 
       browser = Bookmarking.bring_bookmarks
-      
-      expect(browser).to include("http://www.bbc.com")
-      expect(browser).to include("http://www.google.com")
-      expect(browser).to include("http://www.alltheweb.com")
+
+      expect(browser).to include('http://www.bbc.com')
+      expect(browser).to include('http://www.google.com')
+      expect(browser).to include('http://www.alltheweb.com')
     end
   end
 
   xit "creates bookmarks" do
     browser = Bookmarking.create_bookmarks
-    expect(browser).to include("http://www.nairaland.com")
+    expect(browser).to include('http://www.nairaland.com')
   end
 end
