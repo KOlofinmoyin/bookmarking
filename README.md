@@ -40,6 +40,9 @@ The bookmark manager is a website to maintain a collection of bookmarks (URLs).
 ### To run tests:	### To run tests:
 - `rspec`
 
+### Travis yml
+- executed `gem i bundler -v 1.17.3` and `bundle i` from the terminal to attempt fixing erroring build. 
+
 ### User Stories:
 ```
 As a time-pressed user
