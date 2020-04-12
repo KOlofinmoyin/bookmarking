@@ -6,9 +6,9 @@ describe Bookmarking do
     it "retrieves bookmarks" do
       connection = PG.connect(dbname: 'bookmarking_manager_test', user: 'postgres', password: 'pa55w0rd')
       # Add the test-date:
-      connection.exec("INSERT INTO bookmarkings VALUES ('http://www.bbc.com');")
-      connection.exec("INSERT INTO bookmarkings VALUES ('http://www.google.com');")
-      connection.exec("INSERT INTO bookmarkings VALUES ('http://www.alltheweb.com');")
+      connection.exec("INSERT INTO bookmarkings VALUES (1, 'http://www.google.com');")
+      connection.exec("INSERT INTO bookmarkings VALUES (2, 'http://www.bbc.com');")
+      connection.exec("INSERT INTO bookmarkings VALUES (3, 'http://www.alltheweb.com');")
 
       browser = Bookmarking.bring_bookmarks
 
