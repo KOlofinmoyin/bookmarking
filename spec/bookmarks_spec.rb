@@ -16,6 +16,13 @@ describe Bookmarking do
       expect(browser).to include('http://www.google.com')
       expect(browser).to include('http://www.alltheweb.com')
     end
+
+    describe '#.create' do
+      it "creates a new bookmark" do
+        Bookmarking.create(url: 'http://www.ilaweekiti.com')
+        expect(Bookmarking.bring_bookmarks).to include 'http://www.ilaweekiti.com'
+      end
+    end
   end
 
 end
