@@ -41,7 +41,10 @@ The bookmark manager is a website to maintain a collection of bookmarks (URLs).
 - `rspec`
 
 ### Travis yml
-- executed `gem i bundler -v 1.17.3` and `bundle i` from the terminal to attempt fixing erroring build. 
+- executed `gem i bundler -v 1.17.3` and `bundle i` from the terminal to attempt fixing erroring build.
+- ran `$ gem install rubygems-update`
+- ran `gem update --system`
+- ran `gem install rubygems-update --source http://rubygems.org`
 
 ### User Stories:
 ```
