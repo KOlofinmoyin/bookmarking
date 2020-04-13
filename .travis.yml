@@ -1,2 +1,4 @@
 script:
   - bundle exec rspec
+
+  dist: trusty
