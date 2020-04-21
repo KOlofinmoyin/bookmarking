@@ -12,7 +12,9 @@ class Bookmarking
       end
 
       result = connection.exec("SELECT * from bookmarkings")
-      result.map { |bookmark| bookmark['url']  }
+      result.map { |bookmark|
+        Bookmarking.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
+      }
       end
 
       def create(url:, title:)
@@ -21,7 +23,17 @@ class Bookmarking
         else
           connection = PG.connect(dbname: 'bookmarking_manager', user: 'postgres', password: 'pa55w0rd')
         end
-        connection.exec("INSERT INTO bookmarkings (url, title) VALUES('#{url}', '#{title}') RETURNING id, url, title")
+        result = connection.exec("INSERT INTO bookmarkings (url, title) VALUES('#{url}', '#{title}') RETURNING id, title, url;")
+
+        Bookmarking.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+      end
+
+      attr_reader :id, :title, :url
+
+      def initialize(id:, title:, url:)
+        @id = id
+        @title = title
+        @url = url
       end
     end
 end
