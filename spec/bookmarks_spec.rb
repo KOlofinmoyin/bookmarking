@@ -15,10 +15,10 @@ describe Bookmarking do
       browser = Bookmarking.bring_bookmarks
 
       expect(browser.length).to eq 3
-      expect(bookmarks.first).to be_a Bookmarking
-      expect(bookmarks.first.id).to eq bookmark.id
-      expect(bookmarks.first.title).to eq 'Google Inc.'
-      expect(bookmarks.first.url).to eq 'http://www.google.com'
+      expect(browser.first).to be_a Bookmarking
+      expect(browser.first.id).to eq bookmark.id
+      expect(browser.first.title).to eq 'Google Inc.'
+      expect(browser.first.url).to eq 'http://www.google.com'
       # expect(browser).to include('http://www.bbc.com')
       # expect(browser).to include('http://www.google.com')
       # expect(browser).to include('http://www.alltheweb.com')

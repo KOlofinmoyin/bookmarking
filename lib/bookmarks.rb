@@ -1,6 +1,13 @@
 require 'pg'
 
 class Bookmarking
+  attr_reader :id, :title, :url
+
+    def initialize(id:, title:, url:)
+      @id = id
+      @title = title
+      @url = url
+    end
 
     class << self
       def bring_bookmarks
@@ -28,12 +35,5 @@ class Bookmarking
         Bookmarking.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
       end
 
-      attr_reader :id, :title, :url
-
-      def initialize(id:, title:, url:)
-        @id = id
-        @title = title
-        @url = url
-      end
     end
 end
