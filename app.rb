@@ -3,6 +3,8 @@ require './lib/bookmarks'
 require 'pg'
 
 class Bookmarking_Manager < Sinatra::Base
+  enable :sessions, :method_override
+
   get '/' do
     'http://www.google.com'
   end
@@ -18,6 +20,11 @@ class Bookmarking_Manager < Sinatra::Base
 
   post '/bookmarks' do
     Bookmarking.create(url: params[:url], title: params[:title])
+    redirect '/bookmarks'
+  end
+
+  delete '/bookmarks/:id' do
+    Bookmarking.delete(id: params[:id])
     redirect '/bookmarks'
   end
 

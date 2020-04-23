@@ -16,7 +16,8 @@ The bookmark manager is a website to maintain a collection of bookmarks (URLs).
 + Tooling
 
 ### Domain model:
-<img width="566" alt="Screenshot 2020-04-06 at 14 34 41" src="https://user-images.githubusercontent.com/33905131/78564088-dadf4b00-7813-11ea-964b-9745438ea8fd.png">
+
+![deleting_a_bookmark](https://user-images.githubusercontent.com/33905131/80140024-44df4a80-859f-11ea-92e9-174d2c1a08ff.JPG)
 
 ### To set up the database
 
@@ -52,9 +53,15 @@ As a time-pressed user
 So that I can quickly go to web sites I regularly visit
 I would like to see a list of bookmarks
 
+As an accuracy conscious user
+So I can remove my bookmark from Bookmark Manager
+I want to delete a bookmark
 ```
 
 ### Test cases:
 ```
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+- view bookmarks
+- create bookmarks
+- delete bookmarks
+
 ```

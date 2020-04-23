@@ -18,8 +18,8 @@ class Bookmarking
         connection = PG.connect(dbname: 'bookmarking_manager', user: 'postgres', password: 'pa55w0rd')
       end
 
-      result = connection.exec("SELECT * from bookmarkings")
-      result.map { |bookmark|
+      bookmarks = connection.exec("SELECT * from bookmarkings")
+      bookmarks.map { |bookmark|
         Bookmarking.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
       }
       end
@@ -33,6 +33,15 @@ class Bookmarking
         result = connection.exec("INSERT INTO bookmarkings (url, title) VALUES('#{url}', '#{title}') RETURNING id, title, url;")
 
         Bookmarking.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+      end
+
+      def delete(id:)
+        if ENV['RACK_ENV'] == 'test'
+          connection = PG.connect(dbname: 'bookmarking_manager_test', user: 'postgres', password: 'pa55w0rd')
+        else
+          connection = PG.connect(dbname: 'bookmarking_manager', user: 'postgres', password: 'pa55w0rd')
+        end
+        result = connection.exec("DELETE FROM bookmarkings WHERE id = #{id}")
       end
 
     end
