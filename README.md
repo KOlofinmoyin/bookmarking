@@ -56,6 +56,10 @@ I would like to see a list of bookmarks
 As an accuracy conscious user
 So I can remove my bookmark from Bookmark Manager
 I want to delete a bookmark
+
+As a curious user
+So I can change a bookmark in Bookmark Manager
+I want to update a bookmark
 ```
 
 ### Test cases:
@@ -63,5 +67,6 @@ I want to delete a bookmark
 - view bookmarks
 - create bookmarks
 - delete bookmarks
+- update bookmarks
 
 ```
