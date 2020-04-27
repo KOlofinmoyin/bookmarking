@@ -28,5 +28,10 @@ class Bookmarking_Manager < Sinatra::Base
     redirect '/bookmarks'
   end
 
+  get '/bookmarks/:id/edit' do
+    @bookmark = Bookmarking.find(id: params[:id])
+    erb :"bookmarks/edit"
+  end
+
   run! if app_file == $0
 end
