@@ -25,7 +25,7 @@ describe Bookmarking do
     end
   end
 
-  describe '#.create' do
+  describe '.create' do
     it "creates a new bookmark" do
       bookmark = Bookmarking.create(url: 'http://www.ilaweekiti.com', title: 'Site ule ra') #.first
       persisted_data = persisted_data(id: bookmark.id)
@@ -38,7 +38,7 @@ describe Bookmarking do
     end
   end
 
-  describe '#.delete' do
+  describe '.delete' do
     it "deletes a given bookmark" do
       bookmark = Bookmarking.create(title: 'Makers Academy', url: 'http://www.makersacademy.com') #.first
 
@@ -46,6 +46,30 @@ describe Bookmarking do
 
       expect(Bookmarking.bring_bookmarks.length).to eq 0
 
+    end
+  end
+
+  describe '.update' do
+    it "updates the bookmark with the given data" do
+      bookmark = Bookmarking.create(title: 'Makers Academy', url: 'http://www.makersacademy.com')
+      updated_bookmark = Bookmarking.update(id: bookmark.id, url: 'http://www.snakersacademy.com', title: 'Snakers Academy')
+
+      expect(updated_bookmark).to be_a Bookmarking
+      expect(updated_bookmark.id).to eq bookmark.id
+      expect(updated_bookmark.title).to eq 'Snakers Academy'
+      expect(updated_bookmark.url).to eq 'http://www.snakersacademy.com'
+    end
+  end
+
+  define '.find' do
+    it "returns the requested bookmark object" do
+      bookmark = Bookmarking.create(title:'Makers Academy', url: 'http://www.makersacademy.com')
+      result = Bookmarking.find(id: bookmark.id)
+
+      expect(result).to be_a Bookmarking
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq 'Makers Academy'
+      expect(result.url).to eq 'http://www.makersacademy.com'
     end
   end
 end
